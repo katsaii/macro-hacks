@@ -2,12 +2,12 @@
  * Kat @Katsaii
  */
 
-randomise();
-
-function test() {
+function generator() {
 	COROUTINE {
-		return 1 YIELD;
-		return 2 YIELD;
+		return 1;
+		YIELD;
+		return 2;
+		YIELD;
 		return 3;
 	} else {
 		break;
@@ -15,9 +15,9 @@ function test() {
 	return "final";
 }
 
-show_message(test());
-show_message(test());
-show_message(test());
-show_message(test());
-show_message(test());
-show_message(test());
+show_message([
+		generator(),
+		generator(),
+		generator(),
+		generator(),
+		generator()]);
