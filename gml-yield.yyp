@@ -2,7 +2,7 @@
   "resources": [
     {"id":{"name":"examples","path":"scripts/examples/examples.yy",},"order":0,},
     {"id":{"name":"coroutines","path":"scripts/coroutines/coroutines.yy",},"order":0,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -18,7 +18,7 @@
     "children": [],
   },
   "RoomOrder": [
-    {"name":"Room1","path":"rooms/Room1/Room1.yy",},
+    {"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},
   ],
   "Folders": [
     {"folderPath":"folders/Yield.yy","order":5,"resourceVersion":"1.0","name":"Yield","tags":[],"resourceType":"GMFolder",},
