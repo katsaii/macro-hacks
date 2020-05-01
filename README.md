@@ -16,15 +16,38 @@ function one_to_three() {
 		return 3;
 	}
 }
-```
 
-Using the `COROUTINE` macro sets up the state of the function, then `YIELD` causes the function to temporarily halt. If the function is called again, processing will pick up where it left off.
-
-```js
 one_to_three(); // 1
 one_to_three(); // 2
 one_to_three(); // 3
 one_to_three(); // 1
 one_to_three(); // 2
+// etc.
+```
+
+Using the `COROUTINE` macro sets up the state of the function, then `YIELD` causes the function to temporarily halt. If the function is called again, processing will pick up where it left off.
+
+### Escaping the Coroutine Scope
+
+If you decide you don't want to be inside the scope of the coroutine anymore, you can simply use the `break` keyword:
+
+```js
+function only_two() {
+	COROUTINE {
+		break;
+		YIELD;
+		return 2;
+		YIELD;
+		break;
+	}
+	// default
+	return "nothing";
+}
+
+only_two(); // "nothing"
+only_two(); // 2
+only_two(); // "nothing"
+only_two(); // "nothing"
+only_two(); // 2
 // etc.
 ```
