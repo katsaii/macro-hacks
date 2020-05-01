@@ -9,7 +9,7 @@ function generator() {
 		return 2;
 		YIELD;
 		return 3;
-	} else {
+	} OTHERWISE {
 		break;
 	}
 	return "final";

@@ -10,3 +10,5 @@
 
 #macro YIELD \
 		; return; } else if (__yield_id <= ++__yield_current) {
+
+#macro OTHERWISE else

@@ -51,3 +51,32 @@ only_two(); // "nothing"
 only_two(); // 2
 // etc.
 ```
+
+### Reaching the End
+
+There is a feature which allows you to run a block of code once the coroutine has ended. This can be used to throw errors, reset variables used in the coroutine, or to stop the coroutine entirely.
+
+```js
+function abc_stream() {
+	COROUTINE {
+		return "A";
+		YIELD;
+		return "B";
+		YIELD;
+		return "C";
+	} OTHERWISE {
+		return undefined;
+	}
+}
+
+abc_stream(); // "A"
+abc_stream(); // "B"
+abc_stream(); // "C"
+abc_stream(); // undefined
+abc_stream(); // undefined
+abc_stream(); // undefined
+abc_stream(); // undefined
+// etc.
+```
+
+The generator `abc_stream` produces its first three values, and then it never returns anything else.
