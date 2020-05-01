@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Yield",
+    "path": "folders/Yield.yy",
   },
   "resourceVersion": "1.0",
-  "name": "yieldable",
+  "name": "coroutines",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -1,6 +1,7 @@
 {
   "resources": [
-    {"id":{"name":"yieldable","path":"scripts/yieldable/yieldable.yy",},"order":0,},
+    {"id":{"name":"examples","path":"scripts/examples/examples.yy",},"order":0,},
+    {"id":{"name":"coroutines","path":"scripts/coroutines/coroutines.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -20,8 +21,9 @@
     {"name":"Room1","path":"rooms/Room1/Room1.yy",},
   ],
   "Folders": [
-    {"folderPath":"folders/Scripts.yy","order":5,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Yield.yy","order":5,"resourceVersion":"1.0","name":"Yield","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Rooms.yy","order":10,"resourceVersion":"1.0","name":"Rooms","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Tests.yy","order":11,"resourceVersion":"1.0","name":"Tests","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},
