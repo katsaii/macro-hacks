@@ -1,4 +1,4 @@
-/* Tests basic coroutine behaviour.
+/* Tests basic coroutine behaviour
  * Kat @Katsaii
  */
 

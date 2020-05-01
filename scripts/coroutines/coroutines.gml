@@ -1,4 +1,4 @@
-/* Pseudo-coroutines.
+/* Pseudo-coroutines (See: `https://github.com/NuxiiGit/gml-yield`)
  * Kat @Katsaii
  */
 
