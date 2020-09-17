@@ -1,7 +1,20 @@
-/* Vertex Format Extension Functions
+/* Vertex Buffer Extension Functions
  * ---------------------------------
  * Kat @Katsaii
  */
+
+/// @desc Returns the fullfat vertex format.
+function vertex_format_fullfat() {
+	static format = (function() {
+		vertex_format_begin();
+		vertex_format_add_position_3d();
+		vertex_format_add_normal();
+		vertex_format_add_colour();
+		vertex_format_add_texcoord();
+		return vertex_format_end();
+	})();
+	return format;
+}
 
 /// @desc Returns the size (in bytes) of a vertex format.
 /// @param {real} vformat The vertex format to inspect.
