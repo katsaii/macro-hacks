@@ -1,4 +1,4 @@
-# Defer
+# Foreach
 
 This short set of macros help enable "for each" loops for arrays in [GameMaker Studio 2](https://www.yoyogames.com/gamemaker).
 
