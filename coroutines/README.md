@@ -1,10 +1,10 @@
-# gml-yield
+# Coroutines
 
-This repository contains the sorce code for `gml-yield`, a short set of macros which enable coroutine-like behaviour for [GameMaker Studio 2](https://www.yoyogames.com/gamemaker).
+This short set of macros help enable coroutine-like behaviour for [GameMaker Studio 2](https://www.yoyogames.com/gamemaker).
 
 ## Usage examples
 
-These macros can be used to create generator functions which return different things depending on some internal state. For example, returning numbers 1 to 3 in sequence:
+These macros can be used to create generator functions that return different results depending on some internal state. For example, returning numbers 1 to 3 in sequence:
 
 ```js
 function one_to_three() {

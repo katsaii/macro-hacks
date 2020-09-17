@@ -1,14 +1,18 @@
-/* Pseudo-coroutines (See: `https://github.com/NuxiiGit/gml-yield`)
+/* Pseudo Coroutines
+ * -----------------
  * Kat @Katsaii
  */
 
 #macro COROUTINE \
-		static __yield_id = 0; \
-		var __yield_current = 0; \
-		__yield_id += 1; \
-		for (;; { __yield_id = 1; __yield_current = 0; }) if (__yield_id <= ++__yield_current)
+		static __coroutine_id = 0; \
+		var __coroutine_current = 0; \
+		__coroutine_id += 1; \
+		for (;; { \
+			__coroutined_id = 1; \
+			__coroutine_current = 0; \
+		}) if (__coroutine_id <= ++__coroutine_current)
 
 #macro YIELD \
-		; return; } else if (__yield_id <= ++__yield_current) {
+		; return; } else if (__coroutine_id <= ++__coroutine_current) {
 
 #macro OTHERWISE else
