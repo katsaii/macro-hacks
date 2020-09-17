@@ -8,13 +8,13 @@ These macros can be used to create generator functions that return different res
 
 ```js
 function one_to_three() {
-	COROUTINE {
-		return 1;
-		YIELD;
-		return 2;
-		YIELD;
-		return 3;
-	}
+  COROUTINE {
+    return 1;
+    YIELD;
+    return 2;
+    YIELD;
+    return 3;
+  }
 }
 
 one_to_three(); // 1
@@ -33,15 +33,15 @@ If you decide you don't want to be inside the scope of the coroutine anymore, yo
 
 ```js
 function only_two() {
-	COROUTINE {
-		break;
-		YIELD;
-		return 2;
-		YIELD;
-		break;
-	}
-	// default
-	return "nothing";
+  COROUTINE {
+    break;
+    YIELD;
+    return 2;
+    YIELD;
+    break;
+  }
+  // default
+  return "nothing";
 }
 
 only_two(); // "nothing"
@@ -58,15 +58,15 @@ There is a feature which allows you to run a block of code once the coroutine ha
 
 ```js
 function abc_stream() {
-	COROUTINE {
-		return "A";
-		YIELD;
-		return "B";
-		YIELD;
-		return "C";
-	} OTHERWISE {
-		return undefined;
-	}
+  COROUTINE {
+    return "A";
+    YIELD;
+    return "B";
+    YIELD;
+    return "C";
+  } OTHERWISE {
+    return undefined;
+  }
 }
 
 abc_stream(); // "A"
