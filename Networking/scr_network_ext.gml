@@ -10,7 +10,8 @@
 function __network_config() {
 	static config = {
 		timeout : -1,
-		nonblocking : false
+		nonblocking : false,
+		reliableUDPTable : ds_map_create()
 	};
 	return config;
 }
@@ -27,6 +28,12 @@ function __network_set_config(_config_value, _setting) {
 		break;
 	case network_config_use_non_blocking_socket:
 		config.nonblocking = _setting;
+		break;
+	case network_config_enable_reliable_udp:
+		config.reliableUDPTable[? _setting] = true;
+		break;
+	case network_config_disable_reliable_udp:
+		ds_map_delete(config.reliableUDPTable, _setting);
 		break;
 	}
 	return result;
