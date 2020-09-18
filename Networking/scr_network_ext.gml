@@ -42,7 +42,7 @@ function __network_set_config(_config_value, _setting) {
 /// @desc Returns the setting of this configuration value.
 /// @param {value} config_value The config to check.
 /// @param {value} [socket] For reliable UDP configurations.
-function network_get_config(_config_value, _setting) {
+function network_get_config(_config_value) {
 	var result = undefined;
 	var config = __network_config();
 	switch (_config_value) {
@@ -51,6 +51,16 @@ function network_get_config(_config_value, _setting) {
 		break;
 	case network_config_use_non_blocking_socket:
 		result = config.nonblocking;
+		break;
+	case network_config_enable_reliable_udp:
+		if (argument_count > 1) {
+			result = ds_map_exists(config.reliableUDPTable, argument[1]);
+		}
+		break;
+	case network_config_disable_reliable_udp:
+		if (argument_count > 1) {
+			result = !ds_map_exists(config.reliableUDPTable, argument[1]);
+		}
 		break;
 	}
 	return result;
