@@ -1,6 +1,6 @@
 /* Network Function Extension Functions
  * ------------------------------------
- * Kat @Katsaii
+ * Kat @katsaii
  */
 
 #macro __NETWORK_SET_CONFIG network_set_config

@@ -1,6 +1,6 @@
 /* Pseudo Properties Proof of Concept
  * ----------------------------------
- * Kat @Katsaii
+ * Kat @katsaii
  */
 
 #macro VAR "foo"

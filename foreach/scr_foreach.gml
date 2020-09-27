@@ -1,6 +1,6 @@
 /* Array Foreach Loop
  * ------------------
- * Kat @Katsaii
+ * Kat @katsaii
  */
 
 #macro FOREACH \

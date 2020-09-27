@@ -1,6 +1,6 @@
 /* Pseudo Coroutines
  * -----------------
- * Kat @Katsaii
+ * Kat @katsaii
  */
 
 #macro COROUTINE \
