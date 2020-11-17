@@ -24,9 +24,9 @@ DEFER {
 
 Closing a text file after its content is read
 ```js
-var file = file_open_text("test.txt");
+var file = file_text_open_read("test.txt");
 var msg = "";
-DEFER file_close(file) UNTIL {
+DEFER file_text_close(file) UNTIL {
   while (!file_text_eof(file)) {
     msg += file_text_readln(file);
   }
