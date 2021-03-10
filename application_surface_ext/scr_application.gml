@@ -159,7 +159,10 @@ function application_surface_draw() {
 	var app_y = pos[1];
 	var app_width = pos[2] - app_x;
 	var app_height = pos[3] - app_y;
+	var colour = gpu_get_colorwriteenable();
+	gpu_set_colorwriteenable(colour[0], colour[1], colour[2], false);
 	draw_surface_stretched(application_surface, app_x, app_y, app_width, app_height);
+	gpu_set_colorwriteenable(colour[0], colour[1], colour[2], colour[3]);
 }
 
 /// @desc Returns the x position of the mouse.
