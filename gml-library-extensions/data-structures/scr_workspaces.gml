@@ -43,11 +43,10 @@ function __workspace_controller() {
 /// @param {real} type The type of the data structure.
 function __workspace_register(_ds, _ds_type) {
     var workspace = __workspace_controller();
-    if not (workspace.enabled) {
-        return;
+    if (workspace.enabled) {
+        var ids = workspace.ids[_ds_type];
+        ids[@ _ds] = true;
     }
-    var ids = workspace.ids[_ds_type];
-    ids[@ _ds] = true;
     return _ds;
 }
 
