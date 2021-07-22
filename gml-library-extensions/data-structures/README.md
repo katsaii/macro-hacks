@@ -1,4 +1,4 @@
-# GUI Layer Fixes and Extensions
+# Data Structure Clean-Up Extensions
 
 This script makes it possible for dynamic data structures to be automatically marked and garbage collected within a workspace.
 
